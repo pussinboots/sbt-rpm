@@ -1,17 +1,18 @@
 This is a simple helloworld web archive (war) project.
 
-That illustrates the use of maven rpm plugin to build a 
+That illustrates the use of spbt native package plugin to build a 
 simple automated deployment with RPM and puppet.
 
 The basic things like register yum repo and install the helloworld rpm
 from that repo is done by puppet. The dependencies of the helloworld rpm
 like java and tomcat are managed by the rpm specification in the pom.xml
-file with the maven rpm plugin. 
+file with the sbt native package plugin. 
 
 This is a minimal puppet approach the rpm dependencies could also be managed
 by puppet.
 
 Required:
+ - createrepo (is needed to create a local yum repo -> install with apt-get install createrepo)
  - rpm (is needed to build a rom with maven and deploy it to the local yum repo -> install with apt-get install rpm)
  - vagrant (optional to test the puppet deployment -> install with apt-get install vagrant)
  - puppet (is only needed in the vagrant box and is prepared in the configured base box)
