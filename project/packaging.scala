@@ -12,14 +12,8 @@ object Packaging {
 	rpmRelease := "1",
 	rpmVendor := "Frank Ittermann",
 	rpmRequirements ++= Seq("chkconfig", "java-1.7.0-openjdk-devel >= 1:1.7", "apache-tomcat >= 7.0"),
-
-	/*rpmPost := Option("""chkconfig mongod on
-chkconfig rabbitmq-server on
-chkconfig indexer on
-service mongod start
-service rabbitmq-server start
-service indexer stop
-service indexer start"""),*/
+	rpmPost := Option("""service tomcat stop
+service tomcat start"""),
 
 	rpmLicense := Some("BSD"),
 	linuxPackageMappings <+= (target) map { bd =>
