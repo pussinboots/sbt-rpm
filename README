@@ -18,6 +18,8 @@ Required:
  - puppet (is only needed in the vagrant box and is prepared in the configured base box)
  - CentOS64_201307 (self created base box at the moment have problems to publish it in git or else were hopefully is fixed in some days)
 
+Start with clone this repository
+
 Build the project.
 
 1) install sbt
@@ -33,17 +35,17 @@ Build the project.
 
 Let's start.
 
-1) clone this repository
-2) download base box for vagrant (could take some minutes the first time, if the download was 
+
+1) download base box for vagrant (could take some minutes the first time, if the download was 
    successfull it is stored local) do it only one time
    $ vagrant box add CentOS64_201307 https://raw.github.com/pussinboots/basebox/master/CentOS64_201307
-3) $ vagrant up
-4) $ vagrant ssh
-5) (ssh on helloworld machine)
+2) $ vagrant up
+3) $ vagrant ssh
+4) (ssh on helloworld machine)
    $ wget localhost:8080/helloworld
    >result should be
    <html><body>Hello World from rpm package</body></html>
-6) (ssh on apache machine)
+5) (ssh on apache machine)
    $ wget localhost
    >result should be
    <h1>Hello from a Vagrant VM</h1>
