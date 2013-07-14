@@ -17,7 +17,15 @@ Required:
  - vagrant (optional to test the puppet deployment -> install with apt-get install vagrant)
  - puppet (is only needed in the vagrant box and is prepared in the configured base box)
  - CentOS64_201307 (self created base box at the moment have problems to publish it in git or else were hopefully is fixed in some days)
- 
+
+Build the project.
+
+1) install sbt
+2) run sbt console
+3) run command to build war
+   $ package-war
+4) run command to build rpm
+   $ rpm:package-bin
 
 Let's start.
 
