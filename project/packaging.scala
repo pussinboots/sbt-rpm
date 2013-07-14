@@ -18,7 +18,7 @@ service tomcat start"""),
 	rpmLicense := Some("BSD"),
 	linuxPackageMappings <+= (target) map { bd =>
           println("target " + bd)
-	  (packageMapping((bd / "scala-2.10/sbt-rpm_2.10-1.0.war") -> "/usr/share/indexer/helloworld.war")
+	  (packageMapping((bd / "scala-2.10/sbt-rpm_2.10-1.0.war") -> "/usr/share/tomcat/webapps/helloworld.war")
 	   withUser "root" withGroup "root" withPerms "0755")
 	}
 )
