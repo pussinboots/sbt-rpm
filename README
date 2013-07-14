@@ -1,36 +1,51 @@
 This is a simple helloworld web archive (war) project.
 
-That illustrates the use of maven rpm plugin to build a 
+That illustrates the use of spbt native package plugin to build a 
 simple automated deployment with RPM and puppet.
 
 The basic things like register yum repo and install the helloworld rpm
 from that repo is done by puppet. The dependencies of the helloworld rpm
 like java and tomcat are managed by the rpm specification in the pom.xml
-file with the maven rpm plugin. 
+file with the sbt native package plugin. 
 
 This is a minimal puppet approach the rpm dependencies could also be managed
 by puppet.
 
 Required:
+ - createrepo (is needed to create a local yum repo -> install with apt-get install createrepo)
  - rpm (is needed to build a rom with maven and deploy it to the local yum repo -> install with apt-get install rpm)
  - vagrant (optional to test the puppet deployment -> install with apt-get install vagrant)
  - puppet (is only needed in the vagrant box and is prepared in the configured base box)
  - CentOS64_201307 (self created base box at the moment have problems to publish it in git or else were hopefully is fixed in some days)
- 
+
+Start with clone this repository
+
+Build the project.
+
+1) install sbt
+2) run sbt console
+3) run command to build war
+   $ package-war
+4) run command to build rpm
+   $ rpm:package-bin
+5) then copy the build rpm from ... to the yum-repo folder
+6) run command createrepo
+   $ createrepo yum-repo
+7) then a new rpm version was build and can be deployed with puppet
 
 Let's start.
 
-1) clone this repository
-2) download base box for vagrant (could take some minutes the first time, if the download was 
+
+1) download base box for vagrant (could take some minutes the first time, if the download was 
    successfull it is stored local) do it only one time
    $ vagrant box add CentOS64_201307 https://raw.github.com/pussinboots/basebox/master/CentOS64_201307
-3) $ vagrant up
-4) $ vagrant ssh
-5) (ssh on helloworld machine)
+2) $ vagrant up
+3) $ vagrant ssh
+4) (ssh on helloworld machine)
    $ wget localhost:8080/helloworld
    >result should be
    <html><body>Hello World from rpm package</body></html>
-6) (ssh on apache machine)
+5) (ssh on apache machine)
    $ wget localhost
    >result should be
    <h1>Hello from a Vagrant VM</h1>
