@@ -7,7 +7,7 @@
     <servlet>
         <servlet-name>HelloWorldServlet</servlet-name>
         <display-name>Hello World</display-name>
-        <servlet-class>org.frank.maven.rpm.HelloWorldServlet</servlet-class>
+        <servlet-class>org.frank.sbt.rpm.HelloWorldServlet</servlet-class>
         <load-on-startup>0</load-on-startup>
     </servlet>
     <servlet-mapping>
