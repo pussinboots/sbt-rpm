@@ -26,6 +26,10 @@ Build the project.
    $ package-war
 4) run command to build rpm
    $ rpm:package-bin
+5) then copy the build rpm from ... to the yum-repo folder
+6) run command createrepo
+   $ createrepo yum-repo
+7) then a new rpm version was build and can be deployed with puppet
 
 Let's start.
 
