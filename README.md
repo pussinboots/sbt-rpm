@@ -12,6 +12,7 @@ This is a minimal puppet approach the rpm dependencies could also be managed
 by puppet and also configured by puppet.
 
 Required:
+ - git (`apt-get install git`)
  - createrepo (is needed to create a local yum repo -> install with `apt-get install createrepo`)
  - rpmbuild (is needed to build a rom with maven and deploy it to the local yum repo -> install with `apt-get install rpm`)
  - vagrant (optional to test the puppet deployment -> install with `apt-get install vagrant`)
