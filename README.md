@@ -13,7 +13,7 @@ by puppet and also configured by puppet.
 
 Required:
  - createrepo (is needed to create a local yum repo -> install with 'apt-get install createrepo')
- - rpm (is needed to build a rom with maven and deploy it to the local yum repo -> install with 'apt-get install rpm')
+ - rpmbuild (is needed to build a rom with maven and deploy it to the local yum repo -> install with 'apt-get install rpm')
  - vagrant (optional to test the puppet deployment -> install with 'apt-get install vagrant')
  - virtualbox (is needed for vagrant as vm provider -> 'apt-get install virtualbox') 
  - puppet (is only needed in the vagrant box and is prepared in the configured base box)
