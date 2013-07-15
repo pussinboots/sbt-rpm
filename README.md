@@ -35,8 +35,7 @@ Build the project.
    `createrepo yum-repo` <br />
 7) then a new rpm version was build and can be deployed with puppet <br />
 
-Let's start.
-
+Automated deployment.
 
 1) download base box for vagrant (could take some minutes the first time, if the download was 
    successfull it is stored local) do it only one time
@@ -65,6 +64,11 @@ You can change the ip address in the Vagrant file see web_config.vm.network :hos
 apache_config.vm.network :hostonly, "192.168.1.11".
 
 Enyoj playing around with it.
+
+This approach show how easy it is with rpm and puppet to have a automated deployment. This scenario
+here is simple and is a one machine with 2 vm approach but if you use a remote yum repo and put the
+puppet manifest also remote with git or puppet master than you are ready for automated deployment on 
+any number of machines you wont. Maybe you got the spirit for that.
 
 If you have questions or have problem feel free to contact me.
 pussinboots666@googlemail.com.
