@@ -31,7 +31,7 @@ class apache {
 
 class helloworld {
   exec { 'yum update':
-    command => '/usr/bin/yum -y update',
+    command => '/usr/bin/yum clean expire-cache',
     require => Yumrepo["Local-Repo"],
   }
   
@@ -63,7 +63,7 @@ class helloworld {
   #} 
   
   package { ["helloworld"]:
-    ensure => present,
+    ensure => latest,
     require => File['/usr/java/latest/'],
     #require => Package["apache-tomcat-7.0.41-1.noarch"]
   }
