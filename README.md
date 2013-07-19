@@ -40,7 +40,7 @@ Automated deployment.
 
 1) download base box for vagrant (could take some minutes the first time, if the download was 
    successfull it is stored local) do it only one time
-   `vagrant box add CentOS64_201307 https://raw.github.com/pussinboots/basebox/master/CentOS64_201307` <br />
+   `vagrant box add CentOS64_201307 https://dl.dropboxusercontent.com/u/35824962/vagrant/CentOS64_201307` <br />
 2) start vm with vagrant 
    `vagrant up` <br />
 3) connect to the started vm with ssh (windows putty)
