@@ -1,4 +1,4 @@
-addSbtPlugin("com.earldouglas" % "xsbt-web-plugin" % "0.3.0")
+addSbtPlugin("com.earldouglas" % "xsbt-web-plugin" % "0.6.0")
 
 resolvers += Resolver.url("scalasbt", new URL("http://scalasbt.artifactoryonline.com/scalasbt/sbt-plugin-releases"))(Resolver.ivyStylePatterns)
 
