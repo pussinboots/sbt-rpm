@@ -14,7 +14,7 @@ object Packaging {
 	rpmRequirements ++= Seq("chkconfig", "java-1.7.0-openjdk-devel >= 1:1.7", "apache-tomcat >= 7.0"),
 	rpmPost := Option("""service tomcat stop
 service tomcat start"""),
-
+	rpmGroup := Some("Applications/Internet"),
 	rpmLicense := Some("BSD"),
 	linuxPackageMappings <+= (target) map { bd =>
           println("target " + bd)
