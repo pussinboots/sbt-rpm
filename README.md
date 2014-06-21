@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/pussinboots/sbt-rpm.svg?branch=master)](https://travis-ci.org/pussinboots/sbt-rpm)
+
 This is a simple helloworld web archive (war) project.
 
 That illustrates the use of sbt native packager (https://github.com/sbt/sbt-native-packager) 
