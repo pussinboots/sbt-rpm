@@ -8,6 +8,7 @@ object Packaging {
   val settings: Seq[Setting[_]] = packagerSettings ++ deploymentSettings ++ Seq(
 	name in Rpm := "helloworld",
 	version in Rpm := "" + new java.util.Date().getTime,
+	packageDescription in Rpm := "Simple hello world web app as rpm package.",
 	packageSummary in Linux := "Helloworld Package",
 	rpmRelease := "1",
 	rpmVendor := "Frank Ittermann",
