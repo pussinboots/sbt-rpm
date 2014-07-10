@@ -13,5 +13,3 @@ libraryDependencies ++= Seq(
 )
 
 Packaging.settings
-
-rpmBrpJavaRepackJars := false
