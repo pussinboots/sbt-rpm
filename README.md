@@ -20,7 +20,7 @@ Required:
  - vagrant (optional to test the puppet deployment -> install with `apt-get install vagrant`)
  - virtualbox (is needed for vagrant as vm provider -> `apt-get install virtualbox`) 
  - puppet (is only needed in the vagrant box and is prepared in the configured base box)
- - CentOS64_201307 (self created base box at the moment have problems to publish it in git or else were hopefully is fixed in some days)
+ - CentOS64_201307 (self created base box hosted by [dropbox](https://dl.dropboxusercontent.com/u/35824962/vagrant/CentOS64_201307))
 
 Start with clone this repository
 
