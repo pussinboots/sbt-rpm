@@ -1,5 +1,5 @@
 language: scala
-script: sbt rpm:package-bin
+script: sbt package-war rpm:package-bin
 scala: 
 - 2.10.2
 before_install:
