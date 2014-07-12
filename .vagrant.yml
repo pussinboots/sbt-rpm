@@ -1,4 +1,4 @@
 repo: 
-	- pussinboots/vagrant-devel-full
-	- pussinboots/vagrant-devel
+    - pussinboots/vagrant-devel-full
+    - pussinboots/vagrant-devel
 folder: /vagrant/project/sbr-rpm
