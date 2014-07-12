@@ -1,7 +1,10 @@
 language: scala
-script: sbt package-war rpm:package-bin
+script: build.sh
 scala: 
 - 2.10.2
 before_install:
  - sudo apt-get update
+ - sudo apt-get install createrepo
  - sudo apt-get install rpm
+after_script:
+ - ls -lh yum-repo
