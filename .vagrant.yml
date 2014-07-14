@@ -1,7 +1,7 @@
 repo: 
     - pussinboots/vagrant-devel-full
     - pussinboots/vagrant-devel
-folder: /vagrant/project/sbr-rpm
+folder: /vagrant/project/sbt-rpm
 deps: 
     - java8
 	- sublime3
