@@ -8,6 +8,7 @@ Vagrant::Config.run do |config|
 	  web_config.vm.box = "CentOS64_201307"
 	  web_config.vm.host_name = "helloworld.com"
 	  web_config.vm.network :hostonly, "192.168.1.10"
+	  #web_config.vm.boot_mode = :gui
    end
    
    config.vm.define :apache do |apache_config|
