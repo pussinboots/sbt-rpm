@@ -4,7 +4,7 @@ repo:
 folder: /vagrant/project/sbt-rpm
 deps: 
     - java8
-	- sublime3
+    - sublime3
 	- sbt
 	- rpm
 	- createrepo
