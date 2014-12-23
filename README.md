@@ -20,7 +20,9 @@ Required:
  - vagrant (optional to test the puppet deployment -> install with `apt-get install vagrant`)
  - virtualbox (is needed for vagrant as vm provider -> `apt-get install virtualbox`) 
  - puppet (is only needed in the vagrant box and is prepared in the configured base box)
- - CentOS64_201307 (self created base box hosted by [dropbox](https://dl.dropboxusercontent.com/u/35824962/vagrant/CentOS64_201307))
+ - CentOS64_201307 (self created base box hosted by [dropbox](https://dl.dropboxusercontent.com/u/35824962/vagrant/CentOS64_201307)
+
+You could also use the [vgit](https://github.com/pussinboots/vagrant-git) npm tool to start a virtual machine which contains all project dependencies ready for development.
 
 Start with clone this repository
 
@@ -33,7 +35,7 @@ Build the project.
    `package-war` <br />
 4) run command to build rpm
    `rpm:package-bin` <br />
-5) then copy the build rpm from target/rpm/RPMS/noarch/ to the yum-repo folder <br />
+5) then copy the build rpm from target/rpm/RPMS/noarch/ to the yum-repo/ folder <br />
 6) run command createrepo
    `createrepo yum-repo` <br />
 7) then a new rpm version was build and can be deployed with puppet <br />
@@ -66,7 +68,7 @@ requested with http://192.168.1.11 from the host system.
 You can change the ip address in the Vagrant file see web_config.vm.network :hostonly, "192.168.1.10" or
 apache_config.vm.network :hostonly, "192.168.1.11".
 
-Enyoj playing around with it.
+Enjoy playing around with it.
 
 This approach show how easy it is with rpm and puppet to have a automated deployment. This scenario
 here is simple and is a one machine with 2 vm approach but if you use a remote yum repo and put the
