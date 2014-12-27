@@ -22,7 +22,9 @@ Required:
  - puppet (is only needed in the vagrant box and is prepared in the configured base box)
  - CentOS64_201307 (self created base box hosted by [dropbox](https://dl.dropboxusercontent.com/u/35824962/vagrant/CentOS64_201307)
 
-You could also use the [vgit](https://github.com/pussinboots/vagrant-git) npm tool to start a virtual machine which contains all project dependencies ready for development.
+You could also use the [vgit](https://github.com/pussinboots/vagrant-git) npm tool to start a virtual machine which contains all project dependencies ready for development. Follow the instruction to install vgit tool and then to start THE development environment:
+
+`vgit repo pussinboots/sbt-rpm`
 
 Start with clone this repository
 
