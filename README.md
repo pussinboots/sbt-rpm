@@ -13,34 +13,47 @@ file with the sbt native package plugin.
 This is a minimal puppet approach the rpm dependencies could also be managed
 by puppet and also configured by puppet.
 
-Required:
+Requirements for development:
  - git (`apt-get install git`)
  - createrepo (is needed to create a local yum repo -> install with `apt-get install createrepo`)
  - rpmbuild (is needed to build a rom with maven and deploy it to the local yum repo -> install with `apt-get install rpm`)
+
+Requirements for deployment:
  - vagrant (optional to test the puppet deployment -> install with `apt-get install vagrant`)
  - virtualbox (is needed for vagrant as vm provider -> `apt-get install virtualbox`) 
+
+Used:
  - puppet (is only needed in the vagrant box and is prepared in the configured base box)
  - CentOS64_201307 (self created base box hosted by [dropbox](https://dl.dropboxusercontent.com/u/35824962/vagrant/CentOS64_201307)
 
-You could also use the [vgit](https://github.com/pussinboots/vagrant-git) npm tool to start a virtual machine which contains all project dependencies ready for development. Follow the instruction to install vgit tool and then to start THE development environment:
+You can install the requirements from above to your system or use the vgit tool to get a ready to use development virtual machine read below.
 
+## vgit Approach
+
+Requirements to use vgit:
+ - vagrant (optional to test the puppet deployment -> install with `apt-get install vagrant`)
+ - virtualbox (is needed for vagrant as vm provider -> `apt-get install virtualbox`) 
+
+Use the [vgit](https://github.com/pussinboots/vagrant-git) npm tool to start a virtual machine which contains all project dependencies ready for development. Follow the instruction to install vgit tool and start the development environment:
 `vgit repo pussinboots/sbt-rpm`
+It could take some minutes to download the development environment image. The result is a started ubuntu 12.10 as virtualbox. This virtual box can be used to perform the following steps. 
 
-Start with clone this repository
+## Development
 
-Build the project.
+To build the project it doesn't matter if you use the offered virtualbox image or your own environment only the needed requirements are meet.
 
-1) install sbt (http://www.scala-sbt.org/release/docs/Getting-Started/Setup.html) <br />
-2) run sbt console with
+1) run sbt console with
    `sbt` <br />
-3) run command to build war
+2) run command to build war
    `package-war` <br />
-4) run command to build rpm
+3) run command to build rpm
    `rpm:package-bin` <br />
-5) then copy the build rpm from target/rpm/RPMS/noarch/ to the yum-repo/ folder <br />
-6) run command createrepo
+4) then copy the build rpm from target/rpm/RPMS/noarch/ to the yum-repo/ folder <br />
+5) run command createrepo
    `createrepo yum-repo` <br />
-7) then a new rpm version was build and can be deployed with puppet <br />
+6) then a new rpm version was build and can be deployed with puppet <br />
+
+##Deployment
 
 Automated deployment.
 
@@ -59,7 +72,6 @@ Automated deployment.
    `wget localhost`
    result should be
    `<h1>Hello from a Vagrant VM</h1>` <br />
-   
 
 The helloworld vm will be setup with ip address 192.168.1.10 and the helloworld app can also be
 requested with http://192.168.1.10:8080/helloworld from the host system.
