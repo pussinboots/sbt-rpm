@@ -1,5 +1,4 @@
 repo: 
-    - pussinboots/vagrant-devel-full
     - pussinboots/vagrant-devel
 folder: /vagrant/project/sbt-rpm
 deps: 
